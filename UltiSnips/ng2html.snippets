@@ -1,0 +1,114 @@
+priority -70
+
+############
+#  COMMON  #
+############
+
+snippet a-class "Angular [class] binding" b
+[class]="${1:expression}"
+endsnippet
+
+snippet a-style "Angular [style] binding" b
+[style.${1:property}]="${2:expression}"
+endsnippet
+
+snippet a-ngClass "Angular ngClass" b
+[ngClass]="{${1:cssClass}: ${2:expression}}"
+endsnippet
+
+snippet a-ngFor "Angular *ngFor" b
+*ngFor="let ${1:item} of ${2:list}"${0}
+endsnippet
+
+snippet a-ngFor-trackBy "Angular *ngFor with trackBy" b
+*ngFor="let ${1:item} of ${2:list}; trackBy:${1:item}.id"${0}
+endsnippet
+
+snippet a-ngForAsync "Angular *ngForAsync" b
+*ngFor="let ${1:item} of ${2:stream} | async as ${3:list}"${0}
+endsnippet
+
+snippet a-form "Form with ngSubmit and form attributes" b
+<form (ngSubmit)="onSubmit()" #${1:form}="ngForm">
+${0}
+</form>
+endsnippet
+
+snippet a-formArrayName "Angular formArrayName" b
+formArrayName="${1:control}"
+endsnippet
+
+snippet a-formControlName "Angular formControlName" b
+formControlName="${1:control}"
+endsnippet
+
+snippet a-formGroup "Angular formGroup" b
+[formGroup]="${1:form}"
+endsnippet
+
+snippet a-formGroupName "Angular formGroupName" b
+[formGroupName]="${1:name}"
+endsnippet
+
+snippet a-form-submit "Angular form submit" b
+<button type="submit" [disabled]="!${1:form}.form.valid">${2:Save}</button>
+endsnippet
+
+snippet a-ngIf "Angular *ngIf" b
+*ngIf="${1:expression}"
+endsnippet
+
+snippet a-ngIfElse "Angular *ngIfElse" b
+*ngIf="${1:expression}; else ${2:templateName}"
+endsnippet
+
+snippet a-ngModel "Angular ngModel" b
+[(ngModel)]="${1:binding}"
+endsnippet
+
+snippet a-routerLink "Angular routerLink" b
+[routerLink]="['/${1:routePath}']" routerLinkActive="${2:router-link-active}" $0
+endsnippet
+
+snippet a-routerLink-param "Angular routerLink with a route parameter" b
+[routerLink]="['/${1:routePath}', ${2:routeParameterValue}]" routerLinkActive="${3:router-link-active}"$0
+endsnippet
+
+snippet a-select "<select> control with ngModel" b
+<select [(ngModel)]="${1:model}">
+	<option *ngFor="let ${2:item} of ${3:list}" [value]="${2:item}">{{${2:item}}}</option>
+</select>
+endsnippet
+
+snippet a-ngStyle "Angular ngStyle" b
+[ngStyle]="{${1:style}: ${2:expression}}"
+endsnippet
+
+snippet a-ngSwitch "Angular ngSwitch" b
+<div [ngSwitch]="${1:conditionExpression}">
+	<div *ngSwitchCase="${2:expression}">${3:output}</div>
+	<div *ngSwitchDefault>${4:output2}</div>
+</div>
+endsnippet
+
+snippet a-prej "Angular pre debug | json" b
+<pre>{{${1:model} | json}}</pre>$0
+endsnippet
+
+snippet a-preja "Angular pre debug | async | json" b
+<pre>{{${1:model} | async | json}}</pre>$0
+endsnippet
+
+snippet a-ng-container "Angular ng-container" b
+<ng-container $0></ng-container>
+endsnippet
+
+snippet a-ng-template "Angular ng-template" b
+<ng-template [ngTemplateOutlet]="${1:outlet}" [ngOutletContext]="${2:context}"></ng-template>
+endsnippet
+
+snippet a-ng-content "Angular ng-content" b
+<ng-content select="${0:selector}"></ng-content>
+endsnippet
+
+# vim:ft=snippets:
