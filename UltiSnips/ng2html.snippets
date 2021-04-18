@@ -4,27 +4,27 @@ priority -70
 #  COMMON  #
 ############
 
-snippet a-class "Angular [class] binding" b
+snippet a-class "Angular [class] binding" w
 [class]="${1:expression}"
 endsnippet
 
-snippet a-style "Angular [style] binding" b
+snippet a-style "Angular [style] binding" w
 [style.${1:property}]="${2:expression}"
 endsnippet
 
-snippet a-ngClass "Angular ngClass" b
+snippet a-ngClass "Angular ngClass" w
 [ngClass]="{${1:cssClass}: ${2:expression}}"
 endsnippet
 
-snippet a-ngFor "Angular *ngFor" b
+snippet a-ngFor "Angular *ngFor" w
 *ngFor="let ${1:item} of ${2:list}"${0}
 endsnippet
 
-snippet a-ngFor-trackBy "Angular *ngFor with trackBy" b
+snippet a-ngFor-trackBy "Angular *ngFor with trackBy" w
 *ngFor="let ${1:item} of ${2:list}; trackBy:${1:item}.id"${0}
 endsnippet
 
-snippet a-ngForAsync "Angular *ngForAsync" b
+snippet a-ngForAsync "Angular *ngForAsync" w
 *ngFor="let ${1:item} of ${2:stream} | async as ${3:list}"${0}
 endsnippet
 
@@ -54,7 +54,7 @@ snippet a-form-submit "Angular form submit" b
 <button type="submit" [disabled]="!${1:form}.form.valid">${2:Save}</button>
 endsnippet
 
-snippet a-ngIf "Angular *ngIf" b
+snippet a-ngIf "Angular *ngIf" w
 *ngIf="${1:expression}"
 endsnippet
 
@@ -66,7 +66,7 @@ snippet a-ngModel "Angular ngModel" b
 [(ngModel)]="${1:binding}"
 endsnippet
 
-snippet a-routerLink "Angular routerLink" b
+snippet a-routerLink "Angular routerLink" w
 [routerLink]="['/${1:routePath}']" routerLinkActive="${2:router-link-active}" $0
 endsnippet
 
@@ -109,6 +109,11 @@ endsnippet
 
 snippet a-ng-content "Angular ng-content" b
 <ng-content select="${0:selector}"></ng-content>
+endsnippet
+
+snippet a-router-outlet "Angular roter outlet" b
+<router-outlet></router-outlet>
+$0
 endsnippet
 
 # vim:ft=snippets:
